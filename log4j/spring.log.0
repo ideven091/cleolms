@@ -1,0 +1,87 @@
+[2022-10-27 08:15:05.895] - 15419 FINE [restartedMain] --- org.apache.catalina.core.AprLifecycleListener: The Apache Tomcat Native library could not be found using names [tcnative-1, libtcnative-1] on the java.library.path [/Users/deven/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]. The errors reported were [Can't load library: /Users/deven/Developer/Interview/iProjects/CleoLMS/bin/libtcnative-1.dylib, Can't load library: /Users/deven/Developer/Interview/iProjects/CleoLMS/bin/liblibtcnative-1.dylib, no tcnative-1 in java.library.path: /Users/deven/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., no libtcnative-1 in java.library.path: /Users/deven/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+org.apache.tomcat.jni.LibraryNotFoundError: Can't load library: /Users/deven/Developer/Interview/iProjects/CleoLMS/bin/libtcnative-1.dylib, Can't load library: /Users/deven/Developer/Interview/iProjects/CleoLMS/bin/liblibtcnative-1.dylib, no tcnative-1 in java.library.path: /Users/deven/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., no libtcnative-1 in java.library.path: /Users/deven/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+	at org.apache.tomcat.jni.Library.<init>(Library.java:93)
+	at org.apache.tomcat.jni.Library.initialize(Library.java:203)
+	at org.apache.catalina.core.AprLifecycleListener.init(AprLifecycleListener.java:203)
+	at org.apache.catalina.core.AprLifecycleListener.isAprAvailable(AprLifecycleListener.java:108)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getDefaultServerLifecycleListeners(TomcatServletWebServerFactory.java:182)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.<init>(TomcatServletWebServerFactory.java:129)
+	at org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat.tomcatServletWebServerFactory(ServletWebServerFactoryConfiguration.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:217)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:160)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.cleo.cleolms.CleoLmsApplication.main(CleoLmsApplication.java:11)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+
+[2022-10-27 08:15:05.988] - 15419 FINE [restartedMain] --- org.apache.tomcat.util.IntrospectionUtils: IntrospectionUtils: setProperty(class org.apache.coyote.http11.Http11NioProtocol port=8080)
+[2022-10-27 08:15:05.994] - 15419 FINE [restartedMain] --- org.apache.tomcat.util.IntrospectionUtils: IntrospectionUtils: setProperty(class org.apache.coyote.http11.Http11NioProtocol bindOnInit=false)
+[2022-10-27 08:15:05.995] - 15419 FINE [restartedMain] --- org.apache.tomcat.util.IntrospectionUtils: IntrospectionUtils: setProperty(class org.apache.tomcat.util.net.NioEndpoint bindOnInit=false)
+[2022-10-27 08:15:05.997] - 15419 FINE [restartedMain] --- org.apache.tomcat.util.IntrospectionUtils: IntrospectionUtils: setProperty(class org.apache.coyote.http11.Http11NioProtocol maxPostSize=2097152)
+[2022-10-27 08:15:05.997] - 15419 FINE [restartedMain] --- org.apache.tomcat.util.IntrospectionUtils: IntrospectionUtils: setProperty(class org.apache.tomcat.util.net.NioEndpoint maxPostSize=2097152)
+[2022-10-27 08:15:06.004] - 15419 FINE [restartedMain] --- org.apache.catalina.core.ContainerBase: Add child StandardHost[localhost] StandardEngine[Tomcat]
+[2022-10-27 08:15:06.015] - 15419 FINE [restartedMain] --- org.apache.catalina.core.ContainerBase: Add child TomcatEmbeddedContext[] StandardEngine[Tomcat].StandardHost[localhost]
+[2022-10-27 08:15:06.052] - 15419 FINE [restartedMain] --- org.apache.tomcat.util.IntrospectionUtils: IntrospectionUtils: setProperty(class org.apache.coyote.http11.Http11NioProtocol parseBodyMethods=POST)
+[2022-10-27 08:15:06.053] - 15419 FINE [restartedMain] --- org.apache.tomcat.util.IntrospectionUtils: IntrospectionUtils: setProperty(class org.apache.tomcat.util.net.NioEndpoint parseBodyMethods=POST)
+[2022-10-27 08:15:06.054] - 15419 INFO [restartedMain] --- org.apache.catalina.core.StandardService: Starting service [Tomcat]
+[2022-10-27 08:15:06.055] - 15419 INFO [restartedMain] --- org.apache.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.63]
+[2022-10-27 08:15:06.057] - 15419 FINE [restartedMain] --- org.apache.catalina.core.StandardContext: Starting ROOT
+[2022-10-27 08:15:06.061] - 15419 FINE [restartedMain] --- org.apache.catalina.core.StandardContext: Configuring default Resources
+[2022-10-27 08:15:06.081] - 15419 FINE [restartedMain] --- org.apache.catalina.core.StandardContext: Processing standard container startup
+[2022-10-27 08:15:06.082] - 15419 FINE [restartedMain] --- org.apache.catalina.loader.WebappLoader: Starting this Loader
+[2022-10-27 08:15:06.100] - 15419 FINE [restartedMain] --- org.apache.catalina.authenticator.AuthenticatorBase: No SingleSignOn Valve is present
+[2022-10-27 08:15:06.105] - 15419 INFO [restartedMain] --- org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]: Initializing Spring embedded WebApplicationContext
+[2022-10-27 08:15:06.129] - 15419 FINE [restartedMain] --- org.apache.catalina.core.ContainerBase: Add child StandardWrapper[dispatcherServlet] StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]
+[2022-10-27 08:15:06.130] - 15419 FINE [restartedMain] --- org.apache.catalina.core.ContainerBase: Add child StandardWrapper[webServlet] StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]
+[2022-10-27 08:15:06.139] - 15419 FINE [restartedMain] --- org.apache.catalina.core.StandardContext: Configuring application event listeners
+[2022-10-27 08:15:06.139] - 15419 FINE [restartedMain] --- org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]: Sending application start events
+[2022-10-27 08:15:06.141] - 15419 FINE [restartedMain] --- org.apache.catalina.session.StandardManager: Start: Loading persisted sessions
+[2022-10-27 08:15:06.142] - 15419 FINE [restartedMain] --- org.apache.catalina.session.StandardManager: Loading persisted sessions from [/var/folders/wt/r04grb6d5pzbsgvv5dhg2q680000gn/T/F1D02E00A39C7BE1ED92CF607CB5511ED34804C8/servlet-sessions/SESSIONS.ser]
+[2022-10-27 08:15:06.142] - 15419 FINE [restartedMain] --- org.apache.catalina.session.StandardManager: No persisted data file found
+[2022-10-27 08:15:06.142] - 15419 FINE [restartedMain] --- org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]: Starting filters
+[2022-10-27 08:15:06.143] - 15419 FINE [restartedMain] --- org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:  Starting filter 'requestContextFilter'
+[2022-10-27 08:15:06.145] - 15419 FINE [restartedMain] --- org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:  Starting filter 'errorPageSecurityFilter'
+[2022-10-27 08:15:06.146] - 15419 FINE [restartedMain] --- org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:  Starting filter 'Tomcat WebSocket (JSR356) Filter'
+[2022-10-27 08:15:06.146] - 15419 FINE [restartedMain] --- org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:  Starting filter 'characterEncodingFilter'
+[2022-10-27 08:15:06.147] - 15419 FINE [restartedMain] --- org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:  Starting filter 'springSecurityFilterChain'
+[2022-10-27 08:15:06.147] - 15419 FINE [restartedMain] --- org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:  Starting filter 'formContentFilter'
+[2022-10-27 08:15:06.147] - 15419 FINE [restartedMain] --- org.apache.catalina.core.StandardContext: Starting completed
+[2022-10-27 08:15:06.149] - 15419 FINE [restartedMain] --- org.apache.catalina.mapper.Mapper: Registered host [localhost]
+[2022-10-27 08:15:06.150] - 15419 FINE [restartedMain] --- org.apache.catalina.mapper.MapperListener: Register Wrapper [webServlet] in Context [] for service [StandardService[Tomcat]]
+[2022-10-27 08:15:06.150] - 15419 FINE [restartedMain] --- org.apache.catalina.mapper.MapperListener: Register Wrapper [dispatcherServlet] in Context [] for service [StandardService[Tomcat]]
+[2022-10-27 08:15:06.151] - 15419 FINE [restartedMain] --- org.apache.catalina.mapper.MapperListener: Register Context [] for service [StandardService[Tomcat]]
+[2022-10-27 08:15:06.152] - 15419 FINE [restartedMain] --- org.apache.catalina.mapper.MapperListener: Register host [localhost] at domain [null] for service [StandardService[Tomcat]]
+[2022-10-27 08:15:07.068] - 15419 FINE [http-nio-8080-Acceptor] --- org.apache.tomcat.util.threads.LimitLatch: Counting up[http-nio-8080-Acceptor] latch=0
+[2022-10-27 08:16:06.158] - 15419 FINE [Catalina-utility-2] --- org.apache.catalina.session.ManagerBase: Start expire sessions StandardManager at 1666838766158 sessioncount 0
+[2022-10-27 08:16:06.158] - 15419 FINE [Catalina-utility-2] --- org.apache.catalina.session.ManagerBase: End expire sessions StandardManager processingTime 0 expired sessions: 0
+[2022-10-27 08:17:06.170] - 15419 FINE [Catalina-utility-1] --- org.apache.catalina.session.ManagerBase: Start expire sessions StandardManager at 1666838826170 sessioncount 0
+[2022-10-27 08:17:06.170] - 15419 FINE [Catalina-utility-1] --- org.apache.catalina.session.ManagerBase: End expire sessions StandardManager processingTime 0 expired sessions: 0
+[2022-10-27 08:18:06.193] - 15419 FINE [Catalina-utility-2] --- org.apache.catalina.session.ManagerBase: Start expire sessions StandardManager at 1666838886193 sessioncount 0
+[2022-10-27 08:18:06.193] - 15419 FINE [Catalina-utility-2] --- org.apache.catalina.session.ManagerBase: End expire sessions StandardManager processingTime 0 expired sessions: 0
+[2022-10-27 08:19:06.211] - 15419 FINE [Catalina-utility-2] --- org.apache.catalina.session.ManagerBase: Start expire sessions StandardManager at 1666838946211 sessioncount 0
+[2022-10-27 08:19:06.211] - 15419 FINE [Catalina-utility-2] --- org.apache.catalina.session.ManagerBase: End expire sessions StandardManager processingTime 0 expired sessions: 0
+[2022-10-27 08:20:06.228] - 15419 FINE [Catalina-utility-2] --- org.apache.catalina.session.ManagerBase: Start expire sessions StandardManager at 1666839006228 sessioncount 0
+[2022-10-27 08:20:06.229] - 15419 FINE [Catalina-utility-2] --- org.apache.catalina.session.ManagerBase: End expire sessions StandardManager processingTime 1 expired sessions: 0
+[2022-10-27 08:21:06.249] - 15419 FINE [Catalina-utility-1] --- org.apache.catalina.session.ManagerBase: Start expire sessions StandardManager at 1666839066248 sessioncount 0
+[2022-10-27 08:21:06.250] - 15419 FINE [Catalina-utility-1] --- org.apache.catalina.session.ManagerBase: End expire sessions StandardManager processingTime 2 expired sessions: 0
